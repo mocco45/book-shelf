@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Book
+{% endblock %}
+
+
+{% block content %}
+    <h3 class="text-center text-5xl">A book</h3>
+    <div class="flex ml-32 mr-32" >
+        <div class=" bg-purple-500 ">
+            <img src="{{ book.imageLink }}" width="300" height="200"/>
+        </div>
+        <div class="bg-orange-500 flex-col ps-10">
+            <p >{{ book.title }}</p>
+            
+            {% comment %} {% lorem 2 b random %} {% endcomment %}
+        </div>
+    </div>
+{% endblock %}
+    
+    

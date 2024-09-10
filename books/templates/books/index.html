@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Books
+{% endblock %}
+
+
+{% block content %}
+    <h3 class="text-center text-5xl">The Book titles</h3>
+    <div class="grid grid-cols-4 gap-4 mt-6">
+        {% for book in books %}
+        <div class="justify-self-center">
+            <a href="{% url 'book.show' book.id %}">
+                <img src="{{ book.imageLink }}" width="200"/>
+                <p>{{ book.title }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+    
+    
